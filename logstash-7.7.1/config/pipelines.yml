@@ -9,3 +9,9 @@
    pipeline.workers: 1
    pipeline.batch.size: 1
    path.config: "/tmp/logstash/nyse_data.conf"
+
+ - pipeline.id: f5_metrics
+   queue.type: persisted
+   pipeline.workers: 1
+   pipeline.batch.size: 1
+   path.config: "/tmp/logstash/f5_metrics.conf"
