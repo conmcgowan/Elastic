@@ -1,0 +1,12 @@
+cluster.name: localcluster
+node.name: "${ES_NODE}"
+path.logs: /var/log/elasticsearch
+path.data: /esmntp/disk/elasticsearch/data
+discovery.seed_hosts: [localhost:9200]
+node.master: false
+node.data: true
+node.ml: false
+network.host: ["${ES_NODE}", _local_]
+node.max_local_storage_nodes: 1
+bootstrap.memory_lock: true
+xpack.security.enabled: false
